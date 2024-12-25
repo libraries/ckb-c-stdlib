@@ -1,7 +1,7 @@
 CC := riscv64-unknown-elf-gcc
 AR := riscv64-unknown-elf-ar
 LIB := libdummylibc.a
-CFLAGS := -Wall -Werror -Wextra -Wno-unused-parameter -Wno-dangling-pointer -Wno-nonnull -Wno-nonnull-compare -fno-builtin-printf -fno-builtin-memcmp -O3 -g -fdata-sections -ffunction-sections
+CFLAGS := -Wall -Werror -Wextra -Wno-unused-parameter -Wno-dangling-pointer -Wno-nonnull -Wno-nonnull-compare -fno-builtin-printf -fno-builtin-memcmp -O3 -g -fdata-sections -ffunction-sections -fno-builtin-vfprintf -fno-builtin-vsprintf -fno-builtin-vsnprintf
 
 LDFLAGS := -nostdlib -nostartfiles -Wl,-static -Wl,--gc-sections
 EXTRA := -I . -I libc -I molecule -Wno-unused-function -Wno-array-bounds -Wno-stringop-overflow
